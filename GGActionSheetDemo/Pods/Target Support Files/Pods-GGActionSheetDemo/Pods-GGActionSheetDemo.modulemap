@@ -1,0 +1,6 @@
+framework module Pods_GGActionSheetDemo {
+  umbrella header "Pods-GGActionSheetDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
