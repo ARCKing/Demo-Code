@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HE5-68-Vnc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--时间轴 & cell动画-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-B3-4t9">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="separatorInset" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="OMS-7p-ywv"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vTo-vv-YXo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hfW-B3-4t9" secondAttribute="trailing" id="J6v-jv-1e8"/>
+                            <constraint firstItem="hfW-B3-4t9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="McW-4b-8Ws"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hfW-B3-4t9" secondAttribute="bottom" id="RK3-yY-Sv3"/>
+                            <constraint firstItem="hfW-B3-4t9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uCT-0V-4qJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="时间轴 &amp; cell动画" id="hpU-U2-1Zz"/>
+                    <connections>
+                        <outlet property="tableView" destination="hfW-B3-4t9" id="xcC-wh-qpV"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="w5o-8V-uPf"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="142" y="112"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UtH-uX-WWS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HE5-68-Vnc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fEm-uN-qa3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xt4-Z1-djE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPz-uY-U5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.20000000000005" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>
