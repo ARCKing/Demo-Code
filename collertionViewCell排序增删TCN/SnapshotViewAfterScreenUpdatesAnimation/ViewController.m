@@ -149,10 +149,11 @@
         self.isEditing = YES;
         self.channelMangerView.isEditing = YES;
         
-        [self.channelMangerView.channelCollectionView layoutIfNeeded];
         [self.channelMangerView.channelCollectionView reloadData];
     }
     
+    [self.channelMangerView.channelCollectionView layoutIfNeeded];
+
     [self.channelMangerView longPressActionWithGesture:recoginzer];
 
 }
