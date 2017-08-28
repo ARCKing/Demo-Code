@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="BayBtn" destination="hhN-z0-AIs" id="5Po-uV-2sK"/>
+                <outlet property="tableView" destination="eiO-wp-DhE" id="4WM-eJ-pF4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="36j-4A-8bp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhN-z0-AIs">
+                    <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                    <color key="backgroundColor" red="0.0" green="0.27058823529999998" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="fjj-T0-Wvh"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="CollectionView和TableView结合－请点击">
+                        <color key="titleColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="GoTuBay:" destination="-1" eventType="touchUpInside" id="pHu-rM-L4h"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eiO-wp-DhE">
+                    <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9EO-8s-1IK"/>
+                        <outlet property="delegate" destination="-1" id="5O4-Pe-BhW"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="eiO-wp-DhE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="89n-WZ-gff"/>
+                <constraint firstItem="hhN-z0-AIs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HAg-iQ-swv"/>
+                <constraint firstAttribute="bottom" secondItem="eiO-wp-DhE" secondAttribute="bottom" id="Rvd-be-U2D"/>
+                <constraint firstItem="eiO-wp-DhE" firstAttribute="top" secondItem="hhN-z0-AIs" secondAttribute="bottom" id="S8H-iw-M6f"/>
+                <constraint firstAttribute="trailing" secondItem="hhN-z0-AIs" secondAttribute="trailing" id="Wg6-Cn-oOx"/>
+                <constraint firstItem="hhN-z0-AIs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="qek-bt-w3X"/>
+                <constraint firstAttribute="trailing" secondItem="eiO-wp-DhE" secondAttribute="trailing" id="vXR-VR-azl"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>
